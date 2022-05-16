@@ -6,7 +6,7 @@ function Appbar() {
       <div className="app_bar">
         <div className="app_brand">cryptote</div>
         <div className="app_bar_button">
-          <a href="https://www.github.com" target="_blank" rel="noreferrer"><button>
+          <a href="https://github.com/aryamitra06/cryptote" target="_blank" rel="noreferrer"><button>
             <span></span>
             <span></span>
             <span></span>
