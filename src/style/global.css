@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+body {
+    padding: 0%;
+    margin: 0%;
+    background: #141414;
+    font-family: 'Ubuntu';
+}
+
+.app_bar {
+    background: #171717;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+}
+
+.app_brand {
+    font-size: 2rem;
+    font-weight: bold;
+    background: linear-gradient(123deg, #0077ff, #00d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* From uiverse.io by @menezes11 */
+.app_bar_button button {
+    position: relative;
+    padding: 1em 1.1em;
+    outline: none;
+    border: 1px solid #303030;
+    background: #212121;
+    color: #ae00ff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 15px;
+    overflow: hidden;
+    transition: 0.2s;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+}
+
+.app_bar_button button:hover {
+    box-shadow: 0 0 10px #ae00ff, 0 0 25px #001eff, 0 0 50px #ae00ff;
+    transition-delay: 0.6s;
+}
+
+.app_bar_button button span {
+    position: absolute;
+}
+
+.app_bar_button button span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ae00ff);
+}
+
+.app_bar_button button:hover span:nth-child(1) {
+    left: 100%;
+    transition: 0.7s;
+}
+
+.app_bar_button button span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #001eff);
+}
+
+.app_bar_button button:hover span:nth-child(3) {
+    right: 100%;
+    transition: 0.7s;
+    transition-delay: 0.35s;
+}
+
+.app_bar_button button span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #ae00ff);
+}
+
+.app_bar_button button:hover span:nth-child(2) {
+    top: 100%;
+    transition: 0.7s;
+    transition-delay: 0.17s;
+}
+
+.app_bar_button button span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #001eff);
+}
+
+.app_bar_button button:hover span:nth-child(4) {
+    bottom: 100%;
+    transition: 0.7s;
+    transition-delay: 0.52s;
+}
+
+.app_bar_button button:active {
+    background: #ae00af;
+    background: linear-gradient(to top right, #ae00af, #001eff);
+    color: #bfbfbf;
+    box-shadow: 0 0 8px #ae00ff, 0 0 8px #001eff, 0 0 8px #ae00ff;
+    transition: 0.1s;
+}
+
+.app_bar_button button:active span:nth-child(1) span:nth-child(2) span:nth-child(2) span:nth-child(2) {
+    transition: none;
+    transition-delay: none;
+}
+
+.main_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero_section{
+    margin: 70px;
+}
+
+.hero_section h1 {
+    text-align: center;
+    color: #F2F2F2;
+    font-size: 2.2rem;
+    font-weight: 200;
+    padding: 0%;
+    margin: 0%;
+}
+
+.hero_section h1 span {
+    background: linear-gradient(332deg, #6b70ff, #f8adff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+.hero_section h2 {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #fdfdfde0;
+    font-weight: 200;
+    padding: 0%;
+    margin: 10px 0px 0px 0px;
+}
+.hero_section h2 span{
+    font-size: 1.3rem;
+    background: linear-gradient(123deg, #0077ff, #00d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.en_de_form{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.encrypt_form, .decrypt_form {
+    display: flex;
+    flex-direction: column;
+}
+
+.encrypt_form p, .decrypt_form p{
+    color: white;
+    font-size: 1.2rem;
+    color: greenyellow;
+}
+
+.encrypt_form input, .decrypt_form input {
+    color: white;
+    width: 600px;
+    height: 30px;
+    border: 2px solid transparent;
+    outline: none;
+    border-bottom: 2px solid #3f3f3f;
+    caret-color: #3f3f3f;
+    background-color: #212121;
+    padding: 5px;
+    transition: .5s linear;
+    font-family: monospace;
+    letter-spacing: 1px;
+}
+
+.encrypt_form input:focus, .decrypt_form input:focus {
+    border: 2px solid #fa4753;
+    caret-color: #fa4753;
+    color: #fa4753;
+    box-shadow: 4px 4px 10px #070707;
+}
+
+.encrypt_form input:focus::placeholder, .decrypt_form input:focus::placeholder {
+    color: #fa4753;
+}
+
+.encrypt_form textarea {
+    resize: none;
+    color: white;
+    margin-top: 9px;
+    width: 600px;
+    height: 200px;
+    border: 2px solid transparent;
+    outline: none;
+    border-bottom: 2px solid #3f3f3f;
+    caret-color: #3f3f3f;
+    background-color: #212121;
+    padding: 5px;
+    transition: .5s linear;
+    font-family: monospace;
+    letter-spacing: 1px;
+}
+
+.encrypt_form textarea:focus {
+    border: 2px solid #fa4753;
+    caret-color: #fa4753;
+    color: #fa4753;
+    box-shadow: 4px 4px 10px #070707;
+}
+
+.encrypt_form textarea:focus::placeholder {
+    color: #fa4753;
+}
+
+.encrypt_form button , .decrypt_form button{
+    height: 30px;
+    color: white;
+    margin-top: 10px;
+    outline: none;
+    border: 2px solid transparent;
+    caret-color: #3f3f3f;
+    background-color: #212121;
+    padding: 5px;
+    transition: .5s linear;
+    font-family: monospace;
+    letter-spacing: 1px;
+}
+.encrypt_form button:focus , .decrypt_form button:focus{
+    border: 2px solid #fa4753;
+    caret-color: #fa4753;
+    color: #fa4753;
+    box-shadow: 4px 4px 10px #070707;
+}
+
+.decrypt_form input{
+    margin-bottom: 9px;
+}
+.decrypt_form button{
+    margin-top: 0px;
+}
+
+/* media query for mobile */
+@media only screen and (max-width: 600px) {
+    .app_bar{
+        height: 50px;
+        padding: 0px 8px;
+    }
+    .app_brand{
+        font-size: 1.5rem;
+    }
+    .app_bar_button button{
+        font-size: 12px;
+        border-radius: 15px;
+        padding: 1em 1.1em;
+        letter-spacing: 0px;
+    }
+    .hero_section{
+        margin: 20px;
+    }
+    .hero_section h1{
+        font-size: 1.3rem;
+    }
+    .hero_section h2{
+        font-size: 0.9rem;
+    }
+    .hero_section h2 span{
+        font-size: 1.1rem;
+    }
+    .en_de_form{
+        gap: 0px;
+    }
+    .encrypt_form p, .decrypt_form p{
+        color: white;
+        font-size: 1rem;
+        color: greenyellow;
+    }
+    .encrypt_form input, .decrypt_form input {
+        width: 320px;
+    }
+    .encrypt_form textarea {
+        width: 320px;
+    }
+    .decrypt_form button{
+        margin-bottom: 15px;
+    }
+  }
