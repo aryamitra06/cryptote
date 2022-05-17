@@ -28,7 +28,7 @@ function EncryptDialog(props) {
         <DialogTitle>Encryption Details</DialogTitle>
         <DialogContent>
           <DialogContentText>
-              <Typography variant="subtitle2">Now COPY LINK and send this to your secret agent, Have fun! 😍😈</Typography>
+              <Typography variant="subtitle2">Now COPY LINK and send to your secret agent, Have fun! 😍😈</Typography>
           </DialogContentText>
         </DialogContent>
         <DialogActions>

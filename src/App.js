@@ -33,6 +33,14 @@ function App() {
         <Toaster
           position="bottom-center"
           reverseOrder={false}
+          toastOptions={{
+            success: {
+              style: {
+                background: 'black',
+                color: 'white'
+              },
+            }
+          }}
         />
       </ThemeProvider>
     </>
