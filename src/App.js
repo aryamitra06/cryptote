@@ -1,5 +1,6 @@
 import "./style/global.css";
 import Appbar from './components/Appbar';
+import Footer from './components/Footer'
 import Main from './components/Main';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import {
@@ -27,6 +28,7 @@ function App() {
             <Route path="/encrypt" element={<Encrypt />} />
             <Route path="/decrypt" element={<Decrypt />} />
           </Routes>
+          <Footer/>
         </BrowserRouter>
         <Toaster
           position="bottom-center"

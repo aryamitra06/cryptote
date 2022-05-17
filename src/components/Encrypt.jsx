@@ -1,5 +1,6 @@
 import React from 'react'
 import EncryptDialog from './EncryptDialog';
+import { Helmet } from "react-helmet";
 const initialValue1 = {
   secretkey: '',
   note: ''
@@ -21,8 +22,17 @@ function Encrypt() {
     seten_value({ ...en_value, [e.target.name]: e.target.value })
   }
 
+
   return (
     <>
+      <Helmet>
+        <title>cryptote - New Encryption</title>
+        <meta
+          name="description"
+          content="Create new private anonymous encrypted secret note with cryptote"
+        />
+      </Helmet>
+
       <div className="en_de_form">
         <div className="encrypt_form">
           <p>🗝️ Encryption</p>
