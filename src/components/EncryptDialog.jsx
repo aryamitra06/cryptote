@@ -28,12 +28,12 @@ function EncryptDialog(props) {
         <DialogTitle>Encryption Details</DialogTitle>
         <DialogContent>
           <DialogContentText>
-              <Typography variant="subtitle2">Now COPY LINK and send to your secret agent, Have fun! 😍😈</Typography>
+              <Typography variant="subtitle2">Now COPY and send it to your secret agent, Have fun! 😍😈</Typography>
           </DialogContentText>
         </DialogContent>
         <DialogActions>
           <Button onClick={props.handleClose}>Close</Button>
-          <Button onClick={()=> {props.handleClose(); handleCopy();}}>Copy Link</Button>
+          <Button onClick={()=> {props.handleClose(); handleCopy();}}>Copy</Button>
         </DialogActions>
       </Dialog>
     </>

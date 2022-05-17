@@ -1,6 +1,7 @@
 import React from 'react'
 import EncryptDialog from './EncryptDialog';
 import { Helmet } from "react-helmet";
+import toast from 'react-hot-toast';
 const initialValue1 = {
   secretkey: '',
   note: ''
@@ -22,6 +23,13 @@ function Encrypt() {
     seten_value({ ...en_value, [e.target.name]: e.target.value })
   }
 
+  const removeSpaces = (e) => {
+    if (e.which === 32){
+      toast.error('Secret Key must be white space free')
+      return false;
+  }
+  }
+
 
   return (
     <>
@@ -36,9 +44,9 @@ function Encrypt() {
       <div className="en_de_form">
         <div className="encrypt_form">
           <p>🗝️ Encryption</p>
-          <input placeholder="Secret key*" name="secretkey" type="text" onChange={(e) => onValueChange(e)} />
+          <input placeholder="Secret key*" name="secretkey" type="text" onChange={(e) => onValueChange(e)} onKeyPress={(e) => removeSpaces(e)}/>
           <textarea placeholder="Secret Note*" name="note" type="text" onChange={(e) => onValueChange(e)} />
-          <button onClick={handleClickOpen_en} disabled={en_value.secretkey.length === 0 || en_value.note.length === 0}>Encrypt</button>
+          <button onClick={handleClickOpen_en} disabled={en_value.secretkey.length === 0 || en_value.note.length === 0 || en_value.secretkey.includes(" ")}>Encrypt</button>
         </div>
       </div>
       <EncryptDialog open={open_en} handleClose={handleClose_en} secretkey={en_value.secretkey} note={en_value.note} />

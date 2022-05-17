@@ -37,9 +37,15 @@ function App() {
             success: {
               style: {
                 background: 'black',
-                color: 'white'
+                color: 'green'
               },
-            }
+            },
+            error: {
+              style: {
+                background: 'black',
+                color: 'red'
+              },
+            },
           }}
         />
       </ThemeProvider>
