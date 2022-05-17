@@ -16,7 +16,7 @@ function EncryptDialog(props) {
   ).toString();
 
   async function handleCopy() {
-    await navigator.clipboard.writeText(`https://cryptote.netlify.app/decrypt?secretkey=${props.secretkey}&code=${ciphertext}`).then(()=> {
+    await navigator.clipboard.writeText(`Hey👋, I've a secret note for you! 🙈😍😈\n\nhttps://cryptote.netlify.app/decrypt?secretkey=${props.secretkey}&code=${ciphertext}`).then(()=> {
       toast.success('Copied to clipboard')
     })
   }
