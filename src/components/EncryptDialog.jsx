@@ -7,6 +7,7 @@ import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import cryptoJs from "crypto-js";
 import Typography from "@mui/material/Typography";
+import toast from 'react-hot-toast';
 
 function EncryptDialog(props) {
   var ciphertext = cryptoJs.AES.encrypt(
@@ -15,8 +16,8 @@ function EncryptDialog(props) {
   ).toString();
 
   async function handleCopy() {
-    await navigator.clipboard.writeText(`Secret Key is: ${props.secretkey}\nCode is: ${ciphertext}`).then(()=> {
-      alert("Copied to clipboard");
+    await navigator.clipboard.writeText(`https://cryptote.netlify.app/decrypt?secretkey=${props.secretkey}&code=${ciphertext}`).then(()=> {
+      toast.success('Copied to clipboard')
     })
   }
 
@@ -27,15 +28,12 @@ function EncryptDialog(props) {
         <DialogTitle>Encryption Details</DialogTitle>
         <DialogContent>
           <DialogContentText>
-              <Typography id="secretkey">Secret Key: <Typography style={{color: 'red'}}>{props.secretkey}</Typography></Typography>
-              <Typography>Code: <Typography style={{color: 'red'}}>{ciphertext}</Typography></Typography>
-              <br></br>
-              <Typography variant="subtitle2">Now copy this and send this to your secret agent, Have fun! 😍😈</Typography>
+              <Typography variant="subtitle2">Now COPY LINK and send this to your secret agent, Have fun! 😍😈</Typography>
           </DialogContentText>
         </DialogContent>
         <DialogActions>
           <Button onClick={props.handleClose}>Close</Button>
-          <Button onClick={()=> {props.handleClose(); handleCopy();}}>Copy</Button>
+          <Button onClick={()=> {props.handleClose(); handleCopy();}}>Copy Link</Button>
         </DialogActions>
       </Dialog>
     </>

@@ -11,7 +11,7 @@ import Typography from "@mui/material/Typography";
 
 function DecryptDialog(props) {
   var bytes = cryptoJs.AES.decrypt(`${props.code}`, `${props.secretkey}`);
-  var originalText = bytes.toString(cryptoJs.enc.Utf8);
+  var originalText = (bytes.toString(cryptoJs.enc.Utf8));
   return (
     <>
       <Dialog open={props.open} onClose={props.handleClose}>
